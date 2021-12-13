@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: $font;
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-30 {
+  flex: 0 1 30%;
+}
+.flex-50 {
+  flex: 0 1 50%;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 2rem 0;
+}
+h2 {
+  font-size: 2rem;
+}
+h1,
+h2 {
+  font-weight: 300;
+}
+.center {
+  text-align: center;
+}
+.width-full {
+  width: 100%;
+}
+.orange-bg {
+  background-color: $secondary;
+}
+.yellow-bg {
+  background-color: $primary;
+}
+.black-bg {
+  background-color: black;
+}
+%btn {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.btn-primary {
+  @extend %btn;
+  background-color: transparent;
+  border: 3px solid black;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 3rem;
+  width: 25%;
+}
+.btn-secondary {
+  @extend %btn;
+  background-color: white;
+  border: none;
+  width: 35%;
+  color: #8e8985;
+}
+.padding {
+  padding: 0 2rem;
+}
+p {
+  line-height: 2;
+}
