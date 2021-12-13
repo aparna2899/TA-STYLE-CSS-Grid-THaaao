@@ -1,0 +1,240 @@
+@import "reset";
+@import "vars";
+@import "general";
+
+header {
+  padding: 1rem 8rem;
+  position: relative;
+  z-index: 8;
+}
+.logo {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px white;
+  a {
+    color: $text;
+    font-weight: 600;
+  }
+}
+.navbar {
+  a {
+    color: #8e8985;
+    margin: 0 1rem;
+  }
+  a:hover {
+    color: $primary;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(8, 400px);
+}
+.home {
+  grid-row: span 2;
+  background-color: #f5e3d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -5rem;
+  position: relative;
+  strong {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  strong,
+  p {
+    color: #8e8985;
+  }
+  img {
+    @extend %set-img;
+    width: 100%;
+  }
+  b {
+    font-weight: 400;
+  }
+}
+.about {
+  span {
+    color: $primary;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    color: #8e8985;
+    margin: 1rem 0;
+  }
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+}
+.features {
+  grid-column: span 2;
+  color: white;
+  strong {
+    display: block;
+  }
+}
+.feature {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  i {
+    font-size: 3rem;
+  }
+  strong {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+  }
+}
+.coding {
+  strong {
+    color: black;
+  }
+  i {
+    color: black;
+  }
+  p {
+    color: #8e8985;
+  }
+}
+%set-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+.skills {
+  @extend %col;
+  progress {
+    appearance: none;
+    height: 0.2rem;
+    border: none;
+    display: block;
+    // margin-top: 1rem;
+    width: 100%;
+  }
+  progress::-webkit-progress-value {
+    background: black;
+  }
+  progress::-webkit-progress-bar {
+    background: white;
+  }
+  position: relative;
+  img {
+    @extend %set-img;
+    width: 50%;
+  }
+}
+.skill {
+  color: black;
+  font-weight: 500;
+}
+
+.contact {
+  grid-row: span 2;
+}
+.contact-details {
+  position: relative;
+  img {
+    @extend %set-img;
+    width: 50%;
+  }
+}
+.map {
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+}
+%col {
+  color: white;
+  font-weight: 300;
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+  div {
+    margin-bottom: 1rem;
+  }
+  span {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  time {
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+.experience,
+.education {
+  @extend %col;
+  strong {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  i {
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+}
+.contact {
+  @extend %col;
+}
+form {
+  margin: 2rem 0;
+}
+.form-control {
+  border: none;
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: transparent;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $primary;
+  outline: none;
+  color: white;
+}
+.form-control::placeholder {
+  color: white;
+}
+textarea {
+  font-family: $font;
+}
+.contact-details {
+  address {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  a {
+    display: block;
+    color: $primary;
+    margin: 1rem 0;
+  }
+  i {
+    margin-right: 0.5rem;
+  }
+}
+footer {
+  padding: 7rem 0;
+  color: #8e8985;
+  small {
+    display: block;
+  }
+  span {
+    color: $primary;
+  }
+  a {
+    margin: 2rem 1rem;
+    color: #8e8985;
+    display: block;
+  }
+}
